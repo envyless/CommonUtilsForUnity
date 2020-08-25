@@ -19,7 +19,7 @@ public class LineDrawerMgr : MonoBehaviour
         }
     }
 
-    public static void DrawLine(Vector3 position1, Vector3 position2, Color? color = null, float consistTime = 0)
+    public static void DrawLine(Vector3 position1, Vector3 position2, Color? color = null, float consistTime = 0, float lineSize = 0.2f)
     {
         if (Instance == null)
             return;
@@ -29,7 +29,7 @@ public class LineDrawerMgr : MonoBehaviour
         if(color.HasValue)
             defualtColor = color.Value;
         
-        ld.DrawLineInGameView(position1, position2, defualtColor);
+        ld.DrawLineInGameView(position1, position2, defualtColor, lineSize);
         ld.SetTime(consistTime);
         Instance.listLineDrawer.Add(ld);
     }

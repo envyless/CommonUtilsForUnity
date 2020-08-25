@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class CommonUtils 
+public static partial class CommonUtils 
 {
 
     public unsafe static int GetSize<T>() where T : unmanaged

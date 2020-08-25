@@ -51,12 +51,13 @@ public class LineDrawer
     }
 
     //Draws lines through the provided vertices
-    public void DrawLineInGameView(Vector3 start, Vector3 end, Color color)
+    public void DrawLineInGameView(Vector3 start, Vector3 end, Color color, float _lineSize = 0.2f)
     {
         if (lineRenderer == null)
         {
             init(0.2f);
         }
+        lineSize = _lineSize;
 
         //Set color
         lineRenderer.startColor = color;
